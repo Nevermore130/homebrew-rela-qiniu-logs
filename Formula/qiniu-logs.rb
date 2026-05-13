@@ -5,23 +5,23 @@
 class QiniuLogs < Formula
   desc "七牛云日志文件下载工具 - 基于用户ID搜索和下载日志文件"
   homepage "https://github.com/Nevermore130/rela-qiniu-logs"
-  version "0.1.5"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Nevermore130/rela-qiniu-logs/releases/download/v0.1.5/rela-qiniu-logs_0.1.5_darwin_amd64.tar.gz"
-      sha256 "5af23eeff0bff84fad912d288ec51e0ffd7db94729f4cb45e3fbf0606a398b6c"
+      url "https://github.com/Nevermore130/rela-qiniu-logs/releases/download/v0.2.0/rela-qiniu-logs_0.2.0_darwin_amd64.tar.gz"
+      sha256 "6a34454fcad910ce1f32916de9dea31ea8f1ca7c432263f381cb9d807bdc935a"
 
-      def install
+      define_method(:install) do
         bin.install "qiniu-logs"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Nevermore130/rela-qiniu-logs/releases/download/v0.1.5/rela-qiniu-logs_0.1.5_darwin_arm64.tar.gz"
-      sha256 "157a6abca600b42a96ef9ca0a22409a804493f69260188a41e4aebe3ee3c3554"
+      url "https://github.com/Nevermore130/rela-qiniu-logs/releases/download/v0.2.0/rela-qiniu-logs_0.2.0_darwin_arm64.tar.gz"
+      sha256 "34d03c276e443d97501a7f295d95234dbae651a0de8fa6a43239591011163729"
 
-      def install
+      define_method(:install) do
         bin.install "qiniu-logs"
       end
     end
@@ -29,16 +29,16 @@ class QiniuLogs < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Nevermore130/rela-qiniu-logs/releases/download/v0.1.5/rela-qiniu-logs_0.1.5_linux_amd64.tar.gz"
-      sha256 "ec555ff21797a11e43f304e0b8de91561bedbdaeae95f3a8e19a7adfe94690cf"
-      def install
+      url "https://github.com/Nevermore130/rela-qiniu-logs/releases/download/v0.2.0/rela-qiniu-logs_0.2.0_linux_amd64.tar.gz"
+      sha256 "e17f185198bd26410efd67e1742a820655317e7c72634dd2d237f0746acecc70"
+      define_method(:install) do
         bin.install "qiniu-logs"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Nevermore130/rela-qiniu-logs/releases/download/v0.1.5/rela-qiniu-logs_0.1.5_linux_arm64.tar.gz"
-      sha256 "3820375ab2b688db9e051a6793712ccedecaef19ec6d29b723a8582ca316549f"
-      def install
+      url "https://github.com/Nevermore130/rela-qiniu-logs/releases/download/v0.2.0/rela-qiniu-logs_0.2.0_linux_arm64.tar.gz"
+      sha256 "57b28a7b6cbee5e89df1de951f1965738766e16d298e5ecb75e57bef015df77f"
+      define_method(:install) do
         bin.install "qiniu-logs"
       end
     end
